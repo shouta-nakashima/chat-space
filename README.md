@@ -8,20 +8,20 @@
 |password|string|null: false|
 |username|string|null: false|
 ### Association
-- has_many :groups,  through:  :users_group
+- has_many :groups,  through:groups_users
 - has_many :messages
-- has_many :users_groups
+- has_many :groups_users
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|groups_id|integer|null: false, foreign_key: true|
-|users_id|integer|null: false, foreign_key: true|
-|images|string|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|image|string||
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -29,15 +29,15 @@
 |name|string|null: false|
 ### Association
 - has_many :messages
-- has_many  :users,  through:  :users_groups
-- has_many  :users_groups
+- has_many  :users,  through:groups_users
+- has_many  :groups_users
 
-## users_groupsテーブル
+## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
