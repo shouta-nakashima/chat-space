@@ -36,6 +36,10 @@ a {
           font-size: 12px;
           bottom: 0;
           color: #999999;
+          display: flex;
+          &__member {
+            margin-left: 10px;
+          }
         }
       } 
       &__edit-btn {

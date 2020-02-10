@@ -3,8 +3,12 @@
     .main-header__group-box
       .main-header__group-box__group-name
         test
-      %p.main-header__group-box__member-list
-        Member:name
+      %ul.main-header__group-box__member-list
+        Member:
+        %li.main-header__group-box__member-list__member
+          tarou
+        %li.main-header__group-box__member-list__member
+          jirou
     .main-header__edit-btn
       = link_to "#" do
         = "Edit"
@@ -12,7 +16,7 @@
     .message-list__chat-box
       .message-list__chat-box__user-box
         %p.message-list__chat-box__user-box__user-name
-          name
+          tarou
         %p.message-list__chat-box__user-box__time
           2019/11/20(wed)17:43:01
       %p.message-list__chat-box__chat-message
@@ -20,7 +24,7 @@
     .message-list__chat-box
       .message-list__chat-box__user-box
         %p.message-list__chat-box__user-box__user-name
-          name
+          jirou
         %p.message-list__chat-box__user-box__time
           2019/11/20(wed)17:53:34
       %p.message-list__chat-box__chat-message
