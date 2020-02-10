@@ -1,0 +1,22 @@
+.side-bar 
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
+        name
+      %ul.side-header__box__icons
+        %li.side-header__box__icons__group-new
+          = link_to '#' do
+            = icon('fas', 'edit')
+        %li.side-header__box__icons__edit
+          = link_to '#' do
+            = icon('fas', 'cog')
+  .groups
+    = link_to "#", class:"group" do
+      %p.group__group-name
+        test
+      %p.group__group-messages
+        まだメッセージはありません
+      %p.group__group-name
+        test2
+      %p.group__group-messages
+        まだメッセージはありません
