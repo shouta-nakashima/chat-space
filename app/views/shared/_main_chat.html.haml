@@ -1,40 +1,32 @@
-.chat-main
-  .main-header
-    .main-header__group-box
-      .main-header__group-box__group-name
-        test
-      %ul.main-header__group-box__member-list
-        Member:
-        %li.main-header__group-box__member-list__member
-          tarou
-        %li.main-header__group-box__member-list__member
-          jirou
-    .main-header__edit-btn
-      = link_to "#" do
-        = "Edit"
-  .message-list
-    .message-list__chat-box
-      .message-list__chat-box__user-box
-        %p.message-list__chat-box__user-box__user-name
-          tarou
-        %p.message-list__chat-box__user-box__time
-          2019/11/20(wed)17:43:01
-      %p.message-list__chat-box__chat-message
-        おはよう
-    .message-list__chat-box
-      .message-list__chat-box__user-box
-        %p.message-list__chat-box__user-box__user-name
-          jirou
-        %p.message-list__chat-box__user-box__time
-          2019/11/20(wed)17:53:34
-      %p.message-list__chat-box__chat-message
-        こんにちは
-  .form
-    %form.new-message
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit",value:"Send", class: "submit-btn"}
-  
+-# .chat-main
+-#   .main-header
+-#     .main-header__group-box
+-#       .main-header__group-box__group-name
+-#         test
+-#       %ul.main-header__group-box__member-list
+-#         Member:
+-#         %li.main-header__group-box__member-list__member
+-#           tarou
+-#         %li.main-header__group-box__member-list__member
+-#           jirou
+-#     .main-header__edit-btn
+-#       = link_to "#" do
+-#         = "Edit"
+-#   .message-list
+-#     .message-list__chat-box
+-#       .message-list__chat-box__user-box
+-#         %p.message-list__chat-box__user-box__user-name
+-#           tarou
+-#         %p.message-list__chat-box__user-box__time
+-#           2019/11/20(wed)17:43:01
+-#       %p.message-list__chat-box__chat-message
+-#         = render @messages
+-#   .form
+-#     .new-message
+-#       = form_for [@group, @message] do |f|
+-#         = f.text_field :content, class: 'input__box-text', placeholder: 'type a message'
+-#         .contents__image
+-#           = f.label :image, class: "input-box__image" do
+-#             = icon('fas', 'image')
+-#             = f.file_field :image, id: 'message_image'
+-#      = f.submit 'Send', class: 'contents__button'
