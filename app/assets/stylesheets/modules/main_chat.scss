@@ -60,8 +60,10 @@ a {
       background-color: #fafafa;
       height: calc(100vh - 190px);
       padding: 35px 40px;
+      overflow: scroll;
       &__chat-box {
         padding-bottom: 40px;
+        width: 400px;
         &__user-box {
         margin-bottom: 12px;
           display: flex;
@@ -92,13 +94,10 @@ a {
       position: relative;
     }
     .input__box {
-      padding-top: 20px;
-      padding-right: 40px;
-      padding-bottom: 20px;
-      padding-left: 40px;
+      padding: 20px 40px;
     }
     .input__box-text {
-      width: 548px;
+      width: 100%;
       height: 50px;
       font-size: 16px;
       color: #434A54;
