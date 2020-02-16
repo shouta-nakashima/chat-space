@@ -58,10 +58,12 @@ $('#new_message').on('submit', function(e){
       $('.message-list').append(html);
       $('form')[0].reset();
       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
-      $(".contents__button").prop("disabled", false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+    })
+    .always(function() {
+      $(".contents__button").prop("disabled", false);
     });
 })
 });
